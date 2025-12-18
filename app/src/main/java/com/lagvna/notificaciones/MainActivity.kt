@@ -101,6 +101,16 @@ fun NotificationView(modifier: Modifier = Modifier){
         ) {
             Text("Notificación Inbox")
         }
+        Button(
+            onClick = {notificationService.showImageNotification()}
+        ) {
+            Text("Notificación Imagen")
+        }
+        Button(
+            onClick = { NotificationWorker.releaseNotification(context)}
+        ) {
+            Text("Notificación por Worker")
+        }
     }
 }
 
